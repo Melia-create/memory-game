@@ -20,17 +20,19 @@ function App() {
       const shuffleCards = () => {
         const shuffledCards = [...cardImages, ...cardImages]
         .sort(() => Math.random() - 0.5)
-        .map(() => ({ ...card, id: Math.random() }))
+        .map((card) => ({ ...card, id: Math.random() }))
 
         setCards(shuffledCards);
         setTurns(0);
       }
 
+      console.log(cards, turns);
+
 
   return (
     <div className="App">
       <h1>Memory Mayhem</h1>
-      <button>New Game</button>
+      <button onClick={shuffleCards}>New Game</button>
     </div>
   );
 }
