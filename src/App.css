@@ -17,3 +17,9 @@ button:hover {
   background: rgb(150, 16, 83);
   color: white;
 }
+
+.card-grid {
+  margin-top: 50px;
+  columns: 4;
+  column-gap: 25px;
+}
