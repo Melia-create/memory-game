@@ -1,4 +1,6 @@
-export default function Card({card}) {
+import './Card.css'
+
+export default function Card({ card }) {
     return (
         <div>
             <div className="card">

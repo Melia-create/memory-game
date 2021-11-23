@@ -1,0 +1,14 @@
+.card {
+    position: relative; 
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.card img:hover{
+    border: 2px solid rgb(150, 16, 83);
+}
