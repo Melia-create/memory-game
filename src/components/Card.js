@@ -1,6 +1,13 @@
 import './Card.css'
 
-export default function Card({ card }) {
+export default function Card({ card, handleChoice }) {
+
+    const handleClick = () => {
+        handleChoice(card)
+    }
+
+
+
     return (
         <div>
             <div className="card">
@@ -12,7 +19,8 @@ export default function Card({ card }) {
                     <img
                         className="back"
                         src="/img/cover.png"
-                        alt="Card Back"></img>
+                        alt="Card Back"
+                        onClick={handleClick}></img>
                 </div>
             </div>
         </div>
