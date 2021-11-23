@@ -25,7 +25,10 @@ function App() {
         const shuffledCards = [...cardImages, ...cardImages]
         .sort(() => Math.random() - 0.5)
         .map((card) => ({ ...card, id: Math.random() }))
+        
 
+        setChoiceOne(null);
+        setChoiceTwo(null);
         setCards(shuffledCards);
         setTurns(0);
       }
@@ -68,7 +71,11 @@ function App() {
       }, [choiceOne, choiceTwo])
 
 
-      console.log(cards)
+      // Start Game automatically 
+
+      useEffect(() => {
+        shuffleCards()
+      }, [])
 
       //Reset cards
 
@@ -84,6 +91,7 @@ function App() {
   return (
     <div className="App">
       <h1>Memory Mayhem</h1>
+      <h3>Turns: {turns}</h3>
       <button onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
