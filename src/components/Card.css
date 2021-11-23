@@ -12,3 +12,14 @@
 .card img:hover{
     border: 2px solid rgb(150, 16, 83);
 }
+
+/* Card front */
+
+.card .front { 
+    transform: rotateY(90deg);
+    position: absolute;
+}
+
+.flipped .front{ 
+    transform: rotateY(0deg);
+}
