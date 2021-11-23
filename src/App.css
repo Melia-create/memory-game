@@ -19,7 +19,8 @@ button:hover {
 }
 
 .card-grid {
-  margin-top: 50px;
-  columns: 4;
-  column-gap: 25px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
